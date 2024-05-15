@@ -1,0 +1,96 @@
+nav {
+  background-color: black;
+  color: white;
+  /* width:100%; */
+  padding: 20px;
+  font: 24px "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.form {
+  margin: 0 auto;
+  width: 30%;
+  margin-top: 7%;
+  background-color: #f3f3f3;
+}
+.licField {
+  display: grid;
+}
+.licField input::placeholder {
+  font-size: 16px;
+}
+
+.border {
+  margin: 58px;
+  padding: 25px 0px 0px 0px;
+}
+
+body {
+  background-color: #fafafa;
+  height: 100%;
+  padding: 0px;
+  margin: 0px;
+}
+.fields {
+  display: grid;
+  margin-top: 31px;
+  margin-bottom: 30px;
+  font-size: 14px;
+}
+.inputFields {
+  height: 36px;
+  border: none;
+  background-color: #e8e8e8;
+  margin-bottom: 10px;
+  margin-top: 12px;
+  padding: 0px 0px 0px 8px;
+  padding-right: 19px;
+}
+
+.labelName {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.nameFields {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns with equal width */
+  gap: 65px; /* Gap between grid items */
+}
+
+.dobFields {
+  display: flex;
+  gap: 26px;
+}
+
+.text-padding {
+  padding: 0px 7px 0px 7px;
+}
+
+button {
+  height: 48px;
+  width: 438px;
+  margin-top: 20px;
+  color: white;
+  background-color: black;
+  margin-bottom: 50px;
+}
+@font-face {
+  font-family: "uberFont";
+  src: url("./font/UberMoveTextRegular.otf") format("truetype");
+  /* Add more font formats if necessary */
+}
+body {
+  font-family: "uberFont", sans-serif;
+}
+
+p {
+  font-size: 14px;
+}
+
+
+
+.errorField{
+  color: red;
+  display: block;
+  margin-bottom: 5px;
+  margin-top: 5px;
+}
