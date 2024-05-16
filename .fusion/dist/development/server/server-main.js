@@ -1320,21 +1320,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var fusion_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(fusion_react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var fusion_plugin_react_router__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__("fusion-plugin-react-router");
 /* harmony import */ var fusion_plugin_react_router__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(fusion_plugin_react_router__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var fusion_plugin_styletron_react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("fusion-plugin-styletron-react");
-/* harmony import */ var fusion_plugin_styletron_react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(fusion_plugin_styletron_react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var fusion_plugin_react_helmet_async__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("fusion-plugin-react-helmet-async");
-/* harmony import */ var fusion_plugin_react_helmet_async__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(fusion_plugin_react_helmet_async__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__("./src/root.js");
-
+/* harmony import */ var fusion_plugin_react_helmet_async__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__("fusion-plugin-react-helmet-async");
+/* harmony import */ var fusion_plugin_react_helmet_async__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(fusion_plugin_react_helmet_async__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var _root_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__("./src/root.js");
 
 
 
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (() => {
-  const app = new (fusion_react__WEBPACK_IMPORTED_MODULE_0___default())(_root_js__WEBPACK_IMPORTED_MODULE_4__["default"]);
-  app.register((fusion_plugin_styletron_react__WEBPACK_IMPORTED_MODULE_2___default()));
+  const app = new (fusion_react__WEBPACK_IMPORTED_MODULE_0___default())(_root_js__WEBPACK_IMPORTED_MODULE_3__["default"]);
   app.register((fusion_plugin_react_router__WEBPACK_IMPORTED_MODULE_1___default()));
-  app.register((fusion_plugin_react_helmet_async__WEBPACK_IMPORTED_MODULE_3___default()));
+  app.register((fusion_plugin_react_helmet_async__WEBPACK_IMPORTED_MODULE_2___default()));
   return app;
 });
 
@@ -1365,18 +1361,74 @@ var _jsxFileName = "C:\\Users\\DELL\\Desktop\\Uber Insurance\\uberForm\\src\\pag
 
 
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const css = (0,fusion_core__WEBPACK_IMPORTED_MODULE_3__.assetUrl)(__webpack_require__("./node_modules/fusion-cli/build/loaders/file-loader.js!./src/pages/home.css?assetUrl=true"));
 const Home = () => {
+  /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(fusion_plugin_react_helmet_async__WEBPACK_IMPORTED_MODULE_2__.Helmet, {
+    children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("link", {
+      rel: "stylesheet",
+      href: "https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    }, void 0, false, {
+      fileName: _jsxFileName,
+      lineNumber: 14,
+      columnNumber: 3
+    }, undefined)
+  }, void 0, false, {
+    fileName: _jsxFileName,
+    lineNumber: 13,
+    columnNumber: 3
+  }, undefined);
+  const tick = (0,fusion_core__WEBPACK_IMPORTED_MODULE_3__.assetUrl)(__webpack_require__("./node_modules/fusion-cli/build/loaders/file-loader.js!./src/images/tick.svg?assetUrl=true"));
   const {
     register,
     handleSubmit,
     reset,
     formState: {
       errors
-    }
+    },
+    watch
   } = (0,react_hook_form__WEBPACK_IMPORTED_MODULE_1__.useForm)();
+  const firstName = watch("firstName");
+  const lastName = watch("lastName");
+  const title = watch("title");
+  const license = watch("license");
+  const months = [{
+    value: "1",
+    name: "January"
+  }, {
+    value: "2",
+    name: "February"
+  }, {
+    value: "3",
+    name: "March"
+  }, {
+    value: "4",
+    name: "April"
+  }, {
+    value: "5",
+    name: "May"
+  }, {
+    value: "6",
+    name: "June"
+  }, {
+    value: "7",
+    name: "July"
+  }, {
+    value: "8",
+    name: "August"
+  }, {
+    value: "9",
+    name: "September"
+  }, {
+    value: "10",
+    name: "October"
+  }, {
+    value: "11",
+    name: "November"
+  }, {
+    value: "12",
+    name: "December"
+  }];
   const [formData, setFormData] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([]);
   const onSubmit = data => {
     console.log(data); // You can handle form submission here
@@ -1389,18 +1441,18 @@ const Home = () => {
         href: css
       }, void 0, false, {
         fileName: _jsxFileName,
-        lineNumber: 28,
+        lineNumber: 54,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 27,
+      lineNumber: 53,
       columnNumber: 7
     }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("nav", {
       children: "Uber"
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 30,
+      lineNumber: 56,
       columnNumber: 7
     }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("div", {
       className: "container form",
@@ -1408,23 +1460,23 @@ const Home = () => {
         className: "container border",
         children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)(_images_pair__WEBPACK_IMPORTED_MODULE_4__["default"], {}, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 33,
+          lineNumber: 60,
           columnNumber: 11
         }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("h1", {
           children: ["Uber Insurance quote in ", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("br", {}, void 0, false, {
             fileName: _jsxFileName,
-            lineNumber: 35,
+            lineNumber: 62,
             columnNumber: 37
           }, undefined), " under 2 minutes"]
         }, void 0, true, {
           fileName: _jsxFileName,
-          lineNumber: 34,
+          lineNumber: 61,
           columnNumber: 11
         }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("p", {
           children: "Compare all Uber approved Private Hire motor insurance providers in one place. All Private Hire motor policies must be purchased online. All providers after automatic uploads of your insurance certificate directly to your uber account, which will help streamline your verification process."
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 37,
+          lineNumber: 64,
           columnNumber: 11
         }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("form", {
           onSubmit: handleSubmit(onSubmit),
@@ -1438,36 +1490,51 @@ const Home = () => {
                 children: "Driving License Number"
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 47,
+                lineNumber: 74,
                 columnNumber: 17
-              }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("input", {
-                placeholder: "xxx-xx-xxx/xxxxx",
-                type: "text",
-                id: "name",
-                name: "license",
-                className: `inputFields ${errors.license ? "error" : ""}`,
-                ...register("license", {
-                  required: true,
-                  pattern: {
-                    value: /^[a-zA-Z0-9]{3}-[a-zA-Z0-9]{2}-[a-zA-Z0-9]{3}\/[a-zA-Z0-9]{5}$/,
-                    message: "Invalid format (xxx-xx-xxx/xxxxx)"
-                  }
-                })
-              }, void 0, false, {
+              }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("div", {
+                className: "licField",
+                children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("input", {
+                  placeholder: "xxx-xx-xxx/xxxxx",
+                  type: "text",
+                  id: "name",
+                  name: "license",
+                  className: `inputFields ${errors.license ? "error" : ""}`,
+                  ...register("license", {
+                    required: true,
+                    pattern: {
+                      value: /^[a-zA-Z0-9]{3}-[a-zA-Z0-9]{2}-[a-zA-Z0-9]{3}\/[a-zA-Z0-9]{5}$/,
+                      message: "Invalid format (xxx-xx-xxx/xxxxx)"
+                    }
+                  })
+                }, void 0, false, {
+                  fileName: _jsxFileName,
+                  lineNumber: 78,
+                  columnNumber: 19
+                }, undefined), license && license.match(/^[a-zA-Z0-9]{3}-[a-zA-Z0-9]{2}-[a-zA-Z0-9]{3}\/[a-zA-Z0-9]{5}$/) && /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("img", {
+                  src: tick,
+                  alt: "Tick Icon",
+                  className: "tickIcon"
+                }, void 0, false, {
+                  fileName: _jsxFileName,
+                  lineNumber: 93,
+                  columnNumber: 21
+                }, undefined)]
+              }, void 0, true, {
                 fileName: _jsxFileName,
-                lineNumber: 51,
+                lineNumber: 77,
                 columnNumber: 17
               }, undefined), errors.license && /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("span", {
                 className: "errorMessage",
                 children: errors.license.message
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 66,
-                columnNumber: 19
+                lineNumber: 97,
+                columnNumber: 36
               }, undefined)]
             }, void 0, true, {
               fileName: _jsxFileName,
-              lineNumber: 46,
+              lineNumber: 73,
               columnNumber: 15
             }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("label", {
               htmlFor: "selectField",
@@ -1475,57 +1542,78 @@ const Home = () => {
               children: "Title"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 69,
+              lineNumber: 99,
               columnNumber: 15
-            }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("select", {
-              id: "selectField",
-              className: `inputFields ${errors.title ? "error" : ""}`,
-              name: "title",
-              ...register("title", {
-                required: true
-              }),
-              children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("option", {
-                value: "",
-                disabled: true,
-                selected: true,
-                hidden: true,
-                children: "e.g Mrs"
+            }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("div", {
+              className: "licField",
+              children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("select", {
+                id: "selectField",
+                className: `inputFields ${errors.title ? "error" : ""}`,
+                name: "title",
+                ...register("title", {
+                  required: true
+                }),
+                children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("option", {
+                  value: "",
+                  disabled: true,
+                  selected: true,
+                  hidden: true,
+                  children: /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("span", {
+                    children: "e.g Mrs"
+                  }, void 0, false, {
+                    fileName: _jsxFileName,
+                    lineNumber: 110,
+                    columnNumber: 21
+                  }, undefined)
+                }, void 0, false, {
+                  fileName: _jsxFileName,
+                  lineNumber: 109,
+                  columnNumber: 19
+                }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("option", {
+                  value: "Mr",
+                  children: "Mr"
+                }, void 0, false, {
+                  fileName: _jsxFileName,
+                  lineNumber: 112,
+                  columnNumber: 19
+                }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("option", {
+                  value: "Ms",
+                  children: "Ms"
+                }, void 0, false, {
+                  fileName: _jsxFileName,
+                  lineNumber: 113,
+                  columnNumber: 19
+                }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("option", {
+                  value: "Mrs",
+                  children: "Mrs"
+                }, void 0, false, {
+                  fileName: _jsxFileName,
+                  lineNumber: 114,
+                  columnNumber: 19
+                }, undefined)]
+              }, void 0, true, {
+                fileName: _jsxFileName,
+                lineNumber: 103,
+                columnNumber: 17
+              }, undefined), title && /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("img", {
+                src: tick,
+                alt: "Tick Icon",
+                className: "tickIcon"
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 78,
-                columnNumber: 17
-              }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("option", {
-                value: "Mr",
-                children: "Mr"
-              }, void 0, false, {
-                fileName: _jsxFileName,
-                lineNumber: 81,
-                columnNumber: 17
-              }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("option", {
-                value: "Ms",
-                children: "Ms"
-              }, void 0, false, {
-                fileName: _jsxFileName,
-                lineNumber: 82,
-                columnNumber: 17
-              }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("option", {
-                value: "Mrs",
-                children: "Mrs"
-              }, void 0, false, {
-                fileName: _jsxFileName,
-                lineNumber: 83,
-                columnNumber: 17
+                lineNumber: 117,
+                columnNumber: 19
               }, undefined)]
             }, void 0, true, {
               fileName: _jsxFileName,
-              lineNumber: 72,
+              lineNumber: 102,
               columnNumber: 15
             }, undefined), errors.title && /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("span", {
               className: "errorField",
               children: "This field is required"
             }, void 0, false, {
               fileName: _jsxFileName,
-              lineNumber: 86,
+              lineNumber: 121,
               columnNumber: 17
             }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("div", {
               className: "nameFields",
@@ -1536,32 +1624,47 @@ const Home = () => {
                   children: "First Name"
                 }, void 0, false, {
                   fileName: _jsxFileName,
-                  lineNumber: 90,
+                  lineNumber: 125,
                   columnNumber: 19
-                }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("input", {
-                  placeholder: "Enter your First Name",
-                  type: "text",
-                  id: "firstName",
-                  name: "firstName",
-                  className: `inputFields ${errors.firstName ? "error" : ""}`,
-                  ...register("firstName", {
-                    required: true
-                  })
-                }, void 0, false, {
+                }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("div", {
+                  className: "licField",
+                  children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("input", {
+                    placeholder: "Enter your first name",
+                    type: "text",
+                    id: "firstName",
+                    name: "firstName",
+                    className: `inputFields nameinput ${errors.firstName ? "error" : ""}`,
+                    ...register("firstName", {
+                      required: true
+                    })
+                  }, void 0, false, {
+                    fileName: _jsxFileName,
+                    lineNumber: 129,
+                    columnNumber: 21
+                  }, undefined), firstName && /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("img", {
+                    src: tick,
+                    alt: "Tick Icon",
+                    className: "tickIcon"
+                  }, void 0, false, {
+                    fileName: _jsxFileName,
+                    lineNumber: 140,
+                    columnNumber: 23
+                  }, undefined)]
+                }, void 0, true, {
                   fileName: _jsxFileName,
-                  lineNumber: 93,
+                  lineNumber: 128,
                   columnNumber: 19
                 }, undefined), errors.firstName && /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("span", {
                   className: "errorField",
                   children: "This field is required"
                 }, void 0, false, {
                   fileName: _jsxFileName,
-                  lineNumber: 102,
+                  lineNumber: 144,
                   columnNumber: 21
                 }, undefined)]
               }, void 0, true, {
                 fileName: _jsxFileName,
-                lineNumber: 89,
+                lineNumber: 124,
                 columnNumber: 17
               }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("div", {
                 children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("label", {
@@ -1570,37 +1673,52 @@ const Home = () => {
                   children: "Last Name"
                 }, void 0, false, {
                   fileName: _jsxFileName,
-                  lineNumber: 106,
+                  lineNumber: 148,
                   columnNumber: 19
-                }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("input", {
-                  placeholder: "Enter Your Last Name",
-                  type: "text",
-                  id: "lastName",
-                  name: "lastName",
-                  className: `inputFields ${errors.lastName ? "error" : ""}`,
-                  ...register("lastName", {
-                    required: true
-                  })
-                }, void 0, false, {
+                }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("div", {
+                  className: "licField",
+                  children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("input", {
+                    placeholder: "Enter your last name",
+                    type: "text",
+                    id: "lastName",
+                    name: "lastName",
+                    className: `inputFields nameinput ${errors.lastName ? "error" : ""}`,
+                    ...register("lastName", {
+                      required: true
+                    })
+                  }, void 0, false, {
+                    fileName: _jsxFileName,
+                    lineNumber: 152,
+                    columnNumber: 21
+                  }, undefined), lastName && /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("img", {
+                    src: tick,
+                    alt: "Tick Icon",
+                    className: "tickIcon"
+                  }, void 0, false, {
+                    fileName: _jsxFileName,
+                    lineNumber: 163,
+                    columnNumber: 23
+                  }, undefined)]
+                }, void 0, true, {
                   fileName: _jsxFileName,
-                  lineNumber: 109,
+                  lineNumber: 151,
                   columnNumber: 19
                 }, undefined), errors.lastName && /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("span", {
                   className: "errorField",
                   children: "This field is required"
                 }, void 0, false, {
                   fileName: _jsxFileName,
-                  lineNumber: 118,
+                  lineNumber: 167,
                   columnNumber: 21
                 }, undefined)]
               }, void 0, true, {
                 fileName: _jsxFileName,
-                lineNumber: 105,
+                lineNumber: 147,
                 columnNumber: 17
               }, undefined)]
             }, void 0, true, {
               fileName: _jsxFileName,
-              lineNumber: 88,
+              lineNumber: 123,
               columnNumber: 15
             }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("div", {
               className: "",
@@ -1610,15 +1728,15 @@ const Home = () => {
                 children: "Date of Birth"
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 123,
+                lineNumber: 172,
                 columnNumber: 17
-              }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("div", {
+              }, undefined), "``", /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("div", {
                 className: "dobFields",
                 children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("div", {
                   className: "",
                   children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("select", {
                     id: "day",
-                    className: `inputFields text-padding ${errors.day ? "error" : ""}`,
+                    className: `inputFields dateInputFields text-padding ${errors.day ? "error" : ""}`,
                     name: "day",
                     defaultValue: "",
                     ...register("day", {
@@ -1631,7 +1749,7 @@ const Home = () => {
                       children: "Day"
                     }, void 0, false, {
                       fileName: _jsxFileName,
-                      lineNumber: 137,
+                      lineNumber: 186,
                       columnNumber: 23
                     }, undefined), Array.from({
                       length: 31
@@ -1640,30 +1758,30 @@ const Home = () => {
                       children: i + 1
                     }, i, false, {
                       fileName: _jsxFileName,
-                      lineNumber: 141,
+                      lineNumber: 190,
                       columnNumber: 25
                     }, undefined))]
                   }, void 0, true, {
                     fileName: _jsxFileName,
-                    lineNumber: 128,
+                    lineNumber: 177,
                     columnNumber: 21
                   }, undefined), errors.day && /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("span", {
                     className: "errorField",
                     children: "This field is required"
                   }, void 0, false, {
                     fileName: _jsxFileName,
-                    lineNumber: 147,
+                    lineNumber: 196,
                     columnNumber: 23
                   }, undefined)]
                 }, void 0, true, {
                   fileName: _jsxFileName,
-                  lineNumber: 127,
+                  lineNumber: 176,
                   columnNumber: 19
                 }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("div", {
                   className: "",
                   children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("select", {
                     id: "month",
-                    className: `inputFields text-padding ${errors.month ? "error" : ""}`,
+                    className: `inputFields dateInputFields text-padding ${errors.month ? "error" : ""}`,
                     name: "month",
                     defaultValue: "",
                     ...register("month", {
@@ -1676,40 +1794,38 @@ const Home = () => {
                       children: "Month"
                     }, void 0, false, {
                       fileName: _jsxFileName,
-                      lineNumber: 160,
+                      lineNumber: 209,
                       columnNumber: 23
-                    }, undefined), Array.from({
-                      length: 12
-                    }, (_, i) => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("option", {
-                      value: i + 1,
-                      children: i + 1
-                    }, i + 1, false, {
+                    }, undefined), months.map(month => /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("option", {
+                      value: month.value,
+                      children: month.name
+                    }, month.value, false, {
                       fileName: _jsxFileName,
-                      lineNumber: 164,
+                      lineNumber: 213,
                       columnNumber: 25
                     }, undefined))]
                   }, void 0, true, {
                     fileName: _jsxFileName,
-                    lineNumber: 151,
+                    lineNumber: 200,
                     columnNumber: 21
                   }, undefined), errors.month && /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("span", {
                     className: "errorField",
                     children: "This field is required"
                   }, void 0, false, {
                     fileName: _jsxFileName,
-                    lineNumber: 170,
+                    lineNumber: 219,
                     columnNumber: 23
                   }, undefined)]
                 }, void 0, true, {
                   fileName: _jsxFileName,
-                  lineNumber: 150,
+                  lineNumber: 199,
                   columnNumber: 19
                 }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("div", {
                   className: "",
                   children: [/*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("select", {
                     id: "year",
                     defaultValue: "",
-                    className: `inputFields text-padding ${errors.year ? "error" : ""}`,
+                    className: `inputFields dateInputFields text-padding ${errors.year ? "error" : ""}`,
                     name: "year",
                     ...register("year", {
                       required: true
@@ -1721,7 +1837,7 @@ const Home = () => {
                       children: "Year"
                     }, void 0, false, {
                       fileName: _jsxFileName,
-                      lineNumber: 183,
+                      lineNumber: 232,
                       columnNumber: 23
                     }, undefined), Array.from({
                       length: 100
@@ -1730,61 +1846,61 @@ const Home = () => {
                       children: new Date().getFullYear() - i
                     }, new Date().getFullYear() - i, false, {
                       fileName: _jsxFileName,
-                      lineNumber: 187,
+                      lineNumber: 236,
                       columnNumber: 25
                     }, undefined))]
                   }, void 0, true, {
                     fileName: _jsxFileName,
-                    lineNumber: 174,
+                    lineNumber: 223,
                     columnNumber: 21
                   }, undefined), errors.year && /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("span", {
                     className: "errorField",
                     children: "This field is required"
                   }, void 0, false, {
                     fileName: _jsxFileName,
-                    lineNumber: 196,
+                    lineNumber: 245,
                     columnNumber: 23
                   }, undefined)]
                 }, void 0, true, {
                   fileName: _jsxFileName,
-                  lineNumber: 173,
+                  lineNumber: 222,
                   columnNumber: 19
                 }, undefined)]
               }, void 0, true, {
                 fileName: _jsxFileName,
-                lineNumber: 126,
+                lineNumber: 175,
                 columnNumber: 17
               }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_5__.jsxDEV)("button", {
                 type: "submit",
                 children: "Get Started"
               }, void 0, false, {
                 fileName: _jsxFileName,
-                lineNumber: 200,
+                lineNumber: 249,
                 columnNumber: 17
               }, undefined)]
             }, void 0, true, {
               fileName: _jsxFileName,
-              lineNumber: 122,
+              lineNumber: 171,
               columnNumber: 15
             }, undefined)]
           }, void 0, true, {
             fileName: _jsxFileName,
-            lineNumber: 45,
+            lineNumber: 72,
             columnNumber: 13
           }, undefined)
         }, void 0, false, {
           fileName: _jsxFileName,
-          lineNumber: 44,
+          lineNumber: 71,
           columnNumber: 11
         }, undefined)]
       }, void 0, true, {
         fileName: _jsxFileName,
-        lineNumber: 32,
+        lineNumber: 59,
         columnNumber: 9
       }, undefined)
     }, void 0, false, {
       fileName: _jsxFileName,
-      lineNumber: 31,
+      lineNumber: 58,
       columnNumber: 7
     }, undefined)]
   }, void 0, true);
@@ -1857,18 +1973,18 @@ const root = /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__.
     component: _pages_home_js__WEBPACK_IMPORTED_MODULE_2__["default"]
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 10,
+    lineNumber: 11,
     columnNumber: 5
   }, undefined), /*#__PURE__*/(0,react_jsx_dev_runtime__WEBPACK_IMPORTED_MODULE_4__.jsxDEV)(fusion_plugin_react_router__WEBPACK_IMPORTED_MODULE_1__.Route, {
     component: _pages_pageNotFound_js__WEBPACK_IMPORTED_MODULE_3__["default"]
   }, void 0, false, {
     fileName: _jsxFileName,
-    lineNumber: 11,
+    lineNumber: 12,
     columnNumber: 5
   }, undefined)]
 }, void 0, true, {
   fileName: _jsxFileName,
-  lineNumber: 9,
+  lineNumber: 10,
   columnNumber: 3
 }, undefined);
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (root);
@@ -1908,10 +2024,17 @@ module.exports = new Map(
 
 /***/ }),
 
+/***/ "./node_modules/fusion-cli/build/loaders/file-loader.js!./src/images/tick.svg?assetUrl=true":
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+module.exports = __webpack_require__.p + "7d2c4c97d742f1e0.svg";
+
+/***/ }),
+
 /***/ "./node_modules/fusion-cli/build/loaders/file-loader.js!./src/pages/home.css?assetUrl=true":
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
-module.exports = __webpack_require__.p + "32d8e1c2de3058f6.css";
+module.exports = __webpack_require__.p + "85a4dd3d7186633c.css";
 
 /***/ }),
 
@@ -1974,14 +2097,6 @@ module.exports = require("C:\\Users\\DELL\\Desktop\\Uber Insurance\\uberForm\\no
 
 "use strict";
 module.exports = require("C:\\Users\\DELL\\Desktop\\Uber Insurance\\uberForm\\node_modules\\fusion-plugin-react-router\\dist\\index.js");
-
-/***/ }),
-
-/***/ "fusion-plugin-styletron-react":
-/***/ ((module) => {
-
-"use strict";
-module.exports = require("C:\\Users\\DELL\\Desktop\\Uber Insurance\\uberForm\\node_modules\\fusion-plugin-styletron-react\\dist-node-cjs\\index.js");
 
 /***/ }),
 
@@ -2174,7 +2289,7 @@ module.exports = require("url");
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
-/******/ 		__webpack_require__.h = () => ("9006fc482aec924f")
+/******/ 		__webpack_require__.h = () => ("eb815447e313e541")
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
