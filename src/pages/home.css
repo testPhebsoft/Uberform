@@ -89,7 +89,7 @@ body {
   padding: 0px 7px 0px 7px;
 }
 
-button {
+.getStartedButton {
   height: 48px;
   width: 100%;
   margin-top: 20px;
@@ -136,4 +136,16 @@ p {
   transform: translateY(-50%);
   width: 20px; 
   height: 20px; 
+}
+.addressButton{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 101px;
+  margin-top: 11px;
+
+}
+
+.addressFind{
+  text-align: right;
+
 }

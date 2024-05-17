@@ -8,11 +8,12 @@ import Pair from "../images/pair";
 const css = assetUrl("./home.css");
 
 const Home = () => {
-
-
   <Helmet>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"/>
-</Helmet>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    />
+  </Helmet>;
   const tick = assetUrl("../images/tick.svg");
   const {
     register,
@@ -25,6 +26,8 @@ const Home = () => {
   const lastName = watch("lastName");
   const title = watch("title");
   const license = watch("license");
+  const address = watch("address");
+  const postcode = watch("postcode");
 
   const months = [
     { value: "1", name: "January" },
@@ -51,6 +54,8 @@ const Home = () => {
   return (
     <>
       <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
         <link rel="stylesheet" href={css} />
       </Helmet>
       <nav>Uber</nav>
@@ -89,12 +94,17 @@ const Home = () => {
                       },
                     })}
                   />
-                  {license && license.match(/^[a-zA-Z0-9]{3}-[a-zA-Z0-9]{2}-[a-zA-Z0-9]{3}\/[a-zA-Z0-9]{5}$/) && (
-                    <img src={tick} alt="Tick Icon" className="tickIcon" />
-                  )}
+                  {license &&
+                    license.match(
+                      /^[a-zA-Z0-9]{3}-[a-zA-Z0-9]{2}-[a-zA-Z0-9]{3}\/[a-zA-Z0-9]{5}$/
+                    ) && (
+                      <img src={tick} alt="Tick Icon" className="tickIcon" />
+                    )}
                 </div>
-                
-                {errors.license && <span className="errorMessage">{errors.license.message}</span>}
+
+                {errors.license && (
+                  <span className="errorMessage">{errors.license.message}</span>
+                )}
               </div>
               <label htmlFor="selectField" className="labelName">
                 Title
@@ -171,7 +181,8 @@ const Home = () => {
               <div className="">
                 <label htmlFor="dob" className="labelName">
                   Date of Birth
-                </label>``
+                </label>
+                ``
                 <div className="dobFields">
                   <div className="">
                     <select
@@ -246,17 +257,171 @@ const Home = () => {
                     )}
                   </div>
                 </div>
-                <button type="submit">Get Started</button>
+                <button className="getStartedButton" type="submit">
+                  Get Started
+                </button>
               </div>
             </div>
-   
           </form>
         </div>
       </div>
-
-
-
-      
+      {/* /////////////////////////////////
+///////////////////////////////
+           Welcome form
+///////////////////////////////
+///////////////////////////////// */}
+      <div className="container form">
+        <div className="container border">
+          <h1>Welcome Pete!</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          <form onSubmit={handleSubmit(onSubmit)}>
+            <div className="fields">
+              <div className="">
+                <div>
+                  <label className="labelName" htmlFor="address">
+                    House name or number
+                  </label>
+                  <div className="licField">
+                    <input
+                      placeholder="e.g 12"
+                      type="text"
+                      id="address"
+                      name="address"
+                      className={`inputFields nameinput ${
+                        errors.address ? "error" : ""
+                      }`}
+                      {...register("address", { required: true })}
+                    />
+                    {address && (
+                      <img src={tick} alt="Tick Icon" className="tickIcon" />
+                    )}
+                  </div>
+                  {errors.address && (
+                    <span className="errorField">This field is required</span>
+                  )}
+                </div>
+                <div>
+                  <label className="labelName" htmlFor="postcode">
+                    Postcode
+                  </label>
+                  <div className="licField">
+                    <input
+                      placeholder="e.g M50 3YJ"
+                      type="text"
+                      id="postcode"
+                      name="postcode"
+                      className={`inputFields nameinput ${
+                        errors.postcode ? "error" : ""
+                      }`}
+                      {...register("postcode", { required: true })}
+                    />
+                    {postcode && (
+                      <img src={tick} alt="Tick Icon" className="tickIcon" />
+                    )}
+                  </div>
+                  {errors.postcode && (
+                    <span className="errorField">This field is required</span>
+                  )}
+                </div>
+                <div className="addressButton">
+                  <div>
+                    <button>Look up address</button>
+                  </div>
+                  <div>
+                    <button>Enter address manually</button>
+                  </div>
+               
+                </div>
+                <div className="addressFind">
+                    {" "}
+                   <a href="#"><p>having trouble finding your address?</p></a> 
+                  </div>
+              </div>
+              <div className="">
+                <label htmlFor="dob" className="labelName">
+                  Date of Birth
+                </label>
+                ``
+                <div className="dobFields">
+                  <div className="">
+                    <select
+                      id="day"
+                      className={`inputFields dateInputFields text-padding ${
+                        errors.day ? "error" : ""
+                      }`}
+                      name="day"
+                      defaultValue=""
+                      {...register("day", { required: true })}
+                    >
+                      <option value="" disabled hidden>
+                        Day
+                      </option>
+                      {Array.from({ length: 31 }, (_, i) => (
+                        <option key={i} value={i + 1}>
+                          {i + 1}
+                        </option>
+                      ))}
+                    </select>
+                    {errors.day && (
+                      <span className="errorField">This field is required</span>
+                    )}
+                  </div>
+                  <div className="">
+                    <select
+                      id="month"
+                      className={`inputFields dateInputFields text-padding ${
+                        errors.month ? "error" : ""
+                      }`}
+                      name="month"
+                      defaultValue=""
+                      {...register("month", { required: true })}
+                    >
+                      <option value="" disabled hidden>
+                        Month
+                      </option>
+                      {months.map((month) => (
+                        <option key={month.value} value={month.value}>
+                          {month.name}
+                        </option>
+                      ))}
+                    </select>
+                    {errors.month && (
+                      <span className="errorField">This field is required</span>
+                    )}
+                  </div>
+                  <div className="">
+                    <select
+                      id="year"
+                      defaultValue=""
+                      className={`inputFields dateInputFields text-padding ${
+                        errors.year ? "error" : ""
+                      }`}
+                      name="year"
+                      {...register("year", { required: true })}
+                    >
+                      <option value="" disabled hidden>
+                        Year
+                      </option>
+                      {Array.from({ length: 100 }, (_, i) => (
+                        <option
+                          key={new Date().getFullYear() - i}
+                          value={new Date().getFullYear() - i}
+                        >
+                          {new Date().getFullYear() - i}
+                        </option>
+                      ))}
+                    </select>
+                    {errors.year && (
+                      <span className="errorField">This field is required</span>
+                    )}
+                  </div>
+                </div>
+                \
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
     </>
   );
 };
