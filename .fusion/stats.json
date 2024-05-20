@@ -2,8 +2,8 @@
   "children": [
     {
       "name": "client",
-      "time": 114,
-      "builtAt": 1716220405160,
+      "time": 391,
+      "builtAt": 1716221211430,
       "errors": [],
       "errorsCount": 0,
       "warnings": [],
@@ -12,8 +12,8 @@
     },
     {
       "name": "server",
-      "time": 142,
-      "builtAt": 1716220405184,
+      "time": 427,
+      "builtAt": 1716221211468,
       "errors": [],
       "errorsCount": 0,
       "warnings": [],
