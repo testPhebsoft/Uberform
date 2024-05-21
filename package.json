@@ -5,6 +5,7 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-solid-svg-icons": "^6.5.2",
+    "bootstrap": "^5.3.3",
     "fusion-cli": "^2.39.1",
     "fusion-core": "^2.11.0",
     "fusion-plugin-react-helmet-async": "^2.6.6",
@@ -15,8 +16,12 @@
     "fusion-tokens": "^3.0.2",
     "prop-types": "^15.7.2",
     "react": "^18.3.1",
+    "react-bootstrap": "^2.10.2",
+    "react-datepicker": "^6.9.0",
     "react-dom": "^18.3.1",
+    "react-dropdown": "^1.11.0",
     "react-hook-form": "^7.51.4",
+    "react-phone-input-2": "^2.15.1",
     "styletron-react": "^5.2.2"
   },
   "scripts": {
