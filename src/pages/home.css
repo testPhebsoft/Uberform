@@ -1,4 +1,4 @@
-@font-face {
+ @font-face {
   font-family: "uberMoveBold";
   src: url("../font/UberMoveBold.otf") format("truetype");
 
@@ -17,7 +17,7 @@ h1{
 nav {
   background-color: black;
   color: white;
-  /* width:100%; */
+   width:100%; 
   padding: 20px;
   font: 24px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -131,7 +131,7 @@ p {
 
 .tickIcon {
   position: absolute;
-  right: 16px; 
+  right: 27px; 
   top: 55%;
   transform: translateY(-50%);
   width: 20px; 
@@ -148,6 +148,7 @@ p {
 
 .addressFind{
   text-align: right;
+  margin-bottom: 34px;
 
 
 }
@@ -212,3 +213,171 @@ p {
     width: 48px;
     border-radius: 26px;
 }
+
+.phoneInput{
+  margin-left: 60px;
+    height: 36px;
+    width: 350px;
+    background-color: #e8e8e8;
+    border: none;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 10px;
+
+}
+.flag-dropdown{
+  background-color: #e8e8e8 !important;
+  border: none !important;
+  height: 36px;
+  width: 52px;
+}
+.conMar{
+  margin-top: 10px;
+} 
+
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  margin-top: 12px;
+}
+
+.radioLabel input[type="radio"] {
+  margin-right: 10px;
+  accent-color: black; /* For modern browsers */
+  margin-top:-5px;
+}
+
+.radioLabel input[type="radio"]:checked {
+  border: 2px solid black;
+}
+
+.dateStyle{
+  margin-top: 13px;
+  margin-bottom: 13px;
+}
+.lookBtn{
+  width: 122px;
+}
+
+
+
+
+.inputRow {
+  display: flex;
+  align-items: center;
+}
+
+.currencySelect {
+  background: none;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px;
+  margin-right: 10px;
+  background-color: #e8e8e8;
+  color: #757575;
+
+
+}
+
+.inputWithIcon {
+  position: relative;
+  flex: 1;
+}
+
+.marketValueInput {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+
+.errorField {
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.react-datepicker__current-month{
+  display:none;
+}
+.react-datepicker__header{
+  background-color: white !important;
+  color: white !important;
+} 
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for Calendar */
+/* .container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+.labelName {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.inputFields {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.inputFields.error {
+  border-color: red;
+}
+
+.errorField {
+  color: red;
+  font-size: 14px;
+}
+
+.submitBtn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background-color: #0056b3;
+} */
