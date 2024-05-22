@@ -6,6 +6,7 @@
     background-color: #ffffff;
     display: flex;
     flex-direction: column;
+    font-size: 14px;
   }
   
   .quote-header {
@@ -51,4 +52,23 @@
 
   .crossColor{
     color:black
+  }
+  .priceImg{
+display: flex;
+align-items: center;
+gap:10px
+  }
+
+  .groupImg{
+    width: 15px;
+    height: 15px;
+  }
+  .PricePerYear{
+    color:#175BCC;
+  }
+
+
+  .companyStyle{
+  margin-bottom: -6px;
+    font-size: 16px;
   }

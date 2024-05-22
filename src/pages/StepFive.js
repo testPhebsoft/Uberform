@@ -2,14 +2,14 @@ import React from "react";
 
 import { Helmet } from "fusion-plugin-react-helmet-async";
 import { assetUrl } from "fusion-core";
-
+// import Sabre from "../images/Sabre.svg";
 import Card from "./Card";
 
 const StepFive = () => {
   const cardCss = assetUrl("./Card.css");
   const quotes = [
     {
-    //   companyLogo: assetUrl("../images/sabre-logo.png"),
+      companyLogo: assetUrl("../images/sabre.svg"),
       companyName: "Sabre Uber",
       price: "£1343.50",
       pricePerYear: "£1343.50 per year",
@@ -24,7 +24,7 @@ const StepFive = () => {
       windscreen: true,
     },
     {
-    //   companyLogo: assetUrl("../images/somerset-bridge-logo.png"),
+      companyLogo: assetUrl("../images/SBG.svg"),
       companyName: "Somerset Bridge Taxi",
       price: "£1350.27",
       pricePerYear: "£1350.27 per year",
@@ -39,7 +39,7 @@ const StepFive = () => {
       windscreen: true,
     },
     {
-    //   companyLogo: assetUrl("../images/ers-logo.png"),
+      companyLogo: assetUrl("../images/ERS.svg"),
       companyName: "ERS Private and Public Hire",
       price: "£1636.01 per year. ",
       pricePerYear: "£1435.78 per year",
@@ -53,7 +53,7 @@ const StepFive = () => {
       windscreen: true,
     },
     {
-        //   companyLogo: assetUrl("../images/ers-logo.png"),
+          companyLogo: assetUrl("../images/Kgm.svg"),
           companyName: "KGM Public and Private Hire",
           price: "£1435.78",
           pricePerYear: "££1636.01 per year",

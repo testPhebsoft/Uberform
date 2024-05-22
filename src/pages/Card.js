@@ -1,5 +1,6 @@
 
 import React from "react";
+import { assetUrl } from "fusion-core";
 
 
 const Card = ({
@@ -16,13 +17,18 @@ const Card = ({
   publicLiability,
   windscreen,
 }) => {
+    const Group = assetUrl("../images/Group.svg");
   return (
     <div className="quote-card">
     <div className="quote-header">
       <img src={companyLogo} alt={`${companyName} logo`} className="company-logo" />
       <button className="buy-button">Buy</button>
     </div>
-    <h3>{pricePerYear}</h3>
+    <h1 className="companyStyle">{companyName}</h1>
+    <div className="priceImg">
+    <img className="groupImg" src={Group} alt="" />
+    <h3 className="PricePerYear">{pricePerYear}</h3>
+    </div>
     <p>{monthlyPayments}</p>
     <div className="quote-details">
       <div className="quote-detail">
