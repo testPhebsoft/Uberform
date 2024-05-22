@@ -1,0 +1,74 @@
+.quote-card {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 16px 0;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    font-size: 14px;
+  }
+  
+  .quote-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+  
+  .company-logo {
+    max-height: 40px;
+  }
+  
+  .buy-button {
+    background-color: #000;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .quote-details {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  .quote-detail {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e0e0e0;
+    padding: 8px 0;
+  }
+  
+  .quote-detail:first-child {
+    border-top: none;
+  }
+  
+  .icon {
+    color: black; /* Ensures the tick and cross icons are black */
+  }
+
+  .crossColor{
+    color:black
+  }
+  .priceImg{
+display: flex;
+align-items: center;
+gap:10px
+  }
+
+  .groupImg{
+    width: 15px;
+    height: 15px;
+  }
+  .PricePerYear{
+    color:#175BCC;
+  }
+
+
+  .companyStyle{
+  margin-bottom: -6px;
+    font-size: 16px;
+  }
