@@ -1,13 +1,17 @@
- @font-face {
+@font-face {
   font-family: "uberMoveBold";
   src: url("../font/UberMoveBold.otf") format("truetype");
+}
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
 }
 
 @font-face {
   font-family: "uberFontMedium";
   src: url("../font/UberMoveTextMedium.otf") format("truetype");
-
 }
 
 @keyframes fadeIn {
@@ -32,16 +36,15 @@
   }
 }
 
-h1{
+h1 {
   font-family: "uberMoveBold", sans-serif;
   font-size: 28px;
-
 }
 
 nav {
   background-color: black;
   color: white;
-   width:100%; 
+  width: 100%;
   padding: 20px;
   font: 24px "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -49,15 +52,14 @@ nav {
 .form {
   margin: 0 auto;
   width: 100%;
-  max-width:494px;
+  max-width: 494px;
   margin-top: 5%;
-  background-color: #FFFFFF;
-    border: 1px solid #f3f3f3;
-    margin-bottom: 30px;
+  background-color: #ffffff;
+  border: 1px solid #f3f3f3;
+  margin-bottom: 30px;
 }
 .licField {
   position: relative;
-
 }
 .licField input::placeholder {
   font-size: 16px;
@@ -75,7 +77,6 @@ body {
   margin: 0px;
 }
 .fields {
-
   margin-top: 31px;
   margin-bottom: 30px;
   font-size: 14px;
@@ -90,7 +91,14 @@ body {
   padding-left: 15px;
   box-sizing: border-box;
 
-  width:  100%;
+  width: 100%;
+}
+
+.inputFields[data-clicked="true"]:focus {
+  background-color: #e8e8e8;
+}
+.inputFields[data-clicked="false"]:focus {
+  background-color: #fff;
 }
 
 .labelName {
@@ -99,14 +107,13 @@ body {
 }
 .nameFields {
   display: grid;
-  grid-template-columns: 1fr 1fr; 
+  grid-template-columns: 1fr 1fr;
   gap: 15px;
 }
 
 .dobFields {
   display: flex;
   gap: 26px;
- 
 }
 
 .text-padding {
@@ -132,78 +139,73 @@ p {
   font-size: 14px;
 }
 
-.optionPreslected { 
+.optionPreslected {
   color: red;
 }
 
-.errorField{
+.errorField {
   color: red;
   display: block;
   margin-bottom: 5px;
   margin-top: 5px;
 }
-.dateInputFields{
+.dateInputFields {
   font-size: 16px !important;
   background-color: white !important;
 }
 
-
-
-.nameinput{
+.nameinput {
   font-size: 14px !important;
 }
 
 .tickIcon {
   position: absolute;
-  right: 27px; 
+  right: 27px;
   top: 55%;
   transform: translateY(-50%);
-  width: 20px; 
-  height: 20px; 
+  width: 20px;
+  height: 20px;
 }
-.addressButton{
+.addressButton {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 101px;
   margin-top: 11px;
   margin-bottom: 7px;
-
 }
 
-.addressFind{
+.addressFind {
   text-align: right;
   margin-bottom: 34px;
-
-
 }
-.lookAddbtn{
+.lookAddbtn {
   height: 28px;
-    width: 108px;
-    background-color: black;
-    border-radius: 8px;
-    font-size: 12px;
-    color: #FFFFFF;
-}
-
-.addManbtn{
+  width: 108px;
+  background-color: black;
   border-radius: 8px;
-    width: 149px;
-    height: 28px;
-    font-size: 12px;
-    border: none;
-    font-weight: 600;
+  font-size: 12px;
+  color: #ffffff;
 }
 
-.findAddbtn{
+.addManbtn {
+  border-radius: 8px;
+  width: 149px;
+  height: 28px;
+  font-size: 12px;
+  border: none;
+  font-weight: 600;
+}
+
+.findAddbtn {
   text-decoration: none;
   color: black;
 }
 
-.contactField{
+.contactField {
   margin-top: 30px;
 }
-.contactDetail{
-  color: #5E5E5E;;
+.contactDetail {
+  color: #5e5e5e;
 }
 
 .buttonContainer {
@@ -212,29 +214,25 @@ p {
   margin-top: 20px; /* Adjust as needed for spacing */
 }
 
-
-
-.phoneInput{
+.phoneInput {
   margin-left: 60px;
-    height: 36px;
-    width: 350px;
-    background-color: #e8e8e8;
-    border: none;
-    border-radius: 8px;
-    padding: 16px;
-    margin-bottom: 10px;
-
+  height: 36px;
+  width: 350px;
+  background-color: #e8e8e8;
+  border: none;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 10px;
 }
-.flag-dropdown{
+.flag-dropdown {
   background-color: #e8e8e8 !important;
   border: none !important;
   height: 36px;
   width: 52px;
 }
-.conMar{
+.conMar {
   margin-top: 10px;
-} 
-
+}
 
 .radioGroup {
   display: flex;
@@ -254,23 +252,20 @@ p {
 .radioLabel input[type="radio"] {
   margin-right: 10px;
   accent-color: black; /* For modern browsers */
-  margin-top:-5px;
+  margin-top: -5px;
 }
 
 .radioLabel input[type="radio"]:checked {
   border: 2px solid black;
 }
 
-.dateStyle{
+.dateStyle {
   margin-top: 13px;
   margin-bottom: 13px;
 }
-.lookBtn{
+.lookBtn {
   width: 122px;
 }
-
-
-
 
 .inputRow {
   display: flex;
@@ -286,8 +281,6 @@ p {
   margin-right: 10px;
   background-color: #e8e8e8;
   color: #757575;
-
-
 }
 
 .inputWithIcon {
@@ -302,61 +295,53 @@ p {
   border-radius: 4px;
 }
 
-
-
 .errorField {
   color: red;
   font-size: 14px;
   margin-top: 5px;
 }
 
-.react-datepicker__current-month{
-  display:none;
+.react-datepicker__current-month {
+  display: none;
 }
-.react-datepicker__header{
+.react-datepicker__header {
   background-color: white !important;
   color: white !important;
-} 
+}
 
-
-
-.multiBtn{
+.multiBtn {
   display: flex;
   justify-content: center;
-    margin-top: 11px;
-    margin-bottom: 7px;
-    gap:300px
- 
+  margin-top: 11px;
+  margin-bottom: 7px;
+  gap: 300px;
 }
-.prevBtn, .nextBtn {
+.prevBtn,
+.nextBtn {
   margin: 0 10px;
 }
 
-.nextBtn{
+.nextBtn {
   background-color: black;
-    height: 48px;
-    border-radius: 999px;
-    width: 96px;
-    cursor: pointer;
-    color: #FFFFFF;
-    border: none;
+  height: 48px;
+  border-radius: 999px;
+  width: 96px;
+  cursor: pointer;
+  color: #ffffff;
+  border: none;
 }
 
-.PrevImg{
+.PrevImg {
   height: 20px;
   width: 20px;
 }
-.prevBtn{
+.prevBtn {
   height: 48px;
-    border: none;
-    width: 48px;
-    cursor: pointer;
-    border-radius: 26px;
+  border: none;
+  width: 48px;
+  cursor: pointer;
+  border-radius: 26px;
 }
-
-
-
-
 
 .step-enter {
   animation: fadeIn 0.5s forwards;
@@ -365,12 +350,6 @@ p {
 .step-exit {
   animation: fadeOut 0.5s forwards;
 }
-
-
-
-
-
-
 
 /* for Calendar */
 /* .container {

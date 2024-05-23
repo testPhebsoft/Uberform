@@ -22,74 +22,80 @@ const DateOfBirth = ({ register, errors, prefix = "" }) => {
         Date of Birth
       </label>
       <div className="dobFields">
-        <select
-          id={`${prefix}Day`}
-          className={`inputFields dateInputFields text-padding ${
-            errors[`${prefix}Day`] ? "error" : ""
-          }`}
-          name={`${prefix}Day`}
-          defaultValue=""
-          {...register(`${prefix}Day`, { required: true })}
-        >
-          <option value="" disabled hidden>
-            Day
-          </option>
-          {Array.from({ length: 31 }, (_, i) => (
-            <option key={i} value={i + 1}>
-              {i + 1}
+        <div>
+          <select
+            id={`${prefix}Day`}
+            className={`inputFields dateInputFields text-padding ${
+              errors[`${prefix}Day`] ? "error" : ""
+            }`}
+            name={`${prefix}Day`}
+            defaultValue=""
+            {...register(`${prefix}Day`, { required: true })}
+          >
+            <option value="" disabled hidden>
+              Day
             </option>
-          ))}
-        </select>
-        {errors[`${prefix}Day`] && (
-          <span className="errorField">This field is required</span>
-        )}
+            {Array.from({ length: 31 }, (_, i) => (
+              <option key={i} value={i + 1}>
+                {i + 1}
+              </option>
+            ))}
+          </select>
+          {errors[`${prefix}Day`] && (
+            <span className="errorField"> Required</span>
+          )}
+        </div>
 
-        <select
-          id={`${prefix}Month`}
-          className={`inputFields dateInputFields text-padding ${
-            errors[`${prefix}Month`] ? "error" : ""
-          }`}
-          name={`${prefix}Month`}
-          defaultValue=""
-          {...register(`${prefix}Month`, { required: true })}
-        >
-          <option value="" disabled hidden>
-            Month
-          </option>
-          {months.map((month) => (
-            <option key={month.value} value={month.value}>
-              {month.name}
+        <div>
+          <select
+            id={`${prefix}Month`}
+            className={`inputFields dateInputFields text-padding ${
+              errors[`${prefix}Month`] ? "error" : ""
+            }`}
+            name={`${prefix}Month`}
+            defaultValue=""
+            {...register(`${prefix}Month`, { required: true })}
+          >
+            <option value="" disabled hidden>
+              Month
             </option>
-          ))}
-        </select>
-        {errors[`${prefix}Month`] && (
-          <span className="errorField">This field is required</span>
-        )}
+            {months.map((month) => (
+              <option key={month.value} value={month.value}>
+                {month.name}
+              </option>
+            ))}
+          </select>
+          {errors[`${prefix}Month`] && (
+            <span className="errorField"> Required</span>
+          )}
+        </div>
 
-        <select
-          id={`${prefix}Year`}
-          className={`inputFields dateInputFields text-padding ${
-            errors[`${prefix}Year`] ? "error" : ""
-          }`}
-          name={`${prefix}Year`}
-          defaultValue=""
-          {...register(`${prefix}Year`, { required: true })}
-        >
-          <option value="" disabled hidden>
-            Year
-          </option>
-          {Array.from({ length: 100 }, (_, i) => (
-            <option
-              key={new Date().getFullYear() - i}
-              value={new Date().getFullYear() - i}
-            >
-              {new Date().getFullYear() - i}
+        <div>
+          <select
+            id={`${prefix}Year`}
+            className={`inputFields dateInputFields text-padding ${
+              errors[`${prefix}Year`] ? "error" : ""
+            }`}
+            name={`${prefix}Year`}
+            defaultValue=""
+            {...register(`${prefix}Year`, { required: true })}
+          >
+            <option value="" disabled hidden>
+              Year
             </option>
-          ))}
-        </select>
-        {errors[`${prefix}Year`] && (
-          <span className="errorField">This field is required</span>
-        )}
+            {Array.from({ length: 100 }, (_, i) => (
+              <option
+                key={new Date().getFullYear() - i}
+                value={new Date().getFullYear() - i}
+              >
+                {new Date().getFullYear() - i}
+              </option>
+            ))}
+          </select>
+          {errors[`${prefix}Year`] && (
+            <span className="errorField"> Required</span>
+          )}
+        </div>
       </div>
     </div>
   );
