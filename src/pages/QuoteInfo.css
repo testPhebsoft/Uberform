@@ -1,0 +1,75 @@
+.quote-info-card {
+  
+    border-radius: 8px;
+    padding: 16px;
+    background-color: #ffffff;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .quote-header {
+    margin-bottom: 16px;
+  }
+  
+  .quote-header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .quote-header p {
+    margin: 8px 0 0;
+    color: #666666;
+  }
+  
+  .quotation-pack,
+  .policy-details,
+  .payment-options {
+    margin-bottom: 16px;
+  }
+  
+  .quotation-pack h3,
+  .policy-details h3,
+  .payment-options h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+  
+  .quotation-pack p,
+  .payment-options p {
+    margin: 0;
+    color: #000000;
+  }
+  
+  .policy-details .policy-detail {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-top: 1px solid #e0e0e0;
+  }
+  
+  .policy-details .policy-detail:first-child {
+    border-top: none;
+  }
+  
+  .policy-details span {
+    color: #333333;
+  }
+  
+  .payment-option {
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 12px;
+    margin-bottom: 8px;
+  }
+  
+  .payment-info .price {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .payment-info p {
+    margin: 8px 0 0;
+    color: #666666;
+  }
+  

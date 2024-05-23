@@ -9,6 +9,7 @@ import NavigationButtons from "./NavigationButtons";
 import Pair from "../images/pair";
 import StepFour from "./StepFour";
 import StepFive from "./StepFive";
+import QuoteInfo from "./QuoteInfo";
 
 const Home = () => {
   const tick = assetUrl("../images/tick.svg");
@@ -17,13 +18,13 @@ const Home = () => {
   const flag = assetUrl("../../node_modules/react-phone-input-2/lib/style.css");
 
   const { register, handleSubmit, control, formState: { errors }, watch } = useForm();
-  const [currentStep, setCurrentStep] = useState(1);
+  const [currentStep, setCurrentStep] = useState(6);
   const [formData, setFormData] = useState({});
   const [animationClass, setAnimationClass] = useState("step-enter");
 
   const onSubmit = (data) => {
     setFormData((prevData) => ({ ...prevData, ...data }));
-    if (currentStep === 5) {
+    if (currentStep === 6) {
       console.log({ ...formData, ...data }); // Handle final form submission
     } else {
       setAnimationClass("step-exit");
@@ -73,6 +74,9 @@ const Home = () => {
               )}
                 {currentStep === 5 && (
                 <StepFive {...{ register, errors, watch, control, tick }} />
+              )}
+                {currentStep === 6 && (
+                <QuoteInfo {...{ register, errors, watch, control, tick }} />
               )}
             </div>
           </form>
